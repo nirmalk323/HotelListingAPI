@@ -36,7 +36,7 @@ builder.Services.AddAutoMapper(typeof(MapperConfiguration));
 //Injecting services to the controller
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped(typeof(ICountryRepository), typeof(CountryRepository));
-
+builder.Services.AddScoped(typeof(IHotelRepository), typeof(HotelRepository));
 
 var app = builder.Build();
 
