@@ -14,7 +14,7 @@ namespace HotelListing.API.Migrations
         {
             migrationBuilder.InsertData(
                 table: "Countries",
-                columns: new[] { "id", "Name", "ShortName" },
+                columns: new[] { "Id", "Name", "ShortName" },
                 values: new object[,]
                 {
                     { 1, "United States", "US" },
@@ -25,7 +25,7 @@ namespace HotelListing.API.Migrations
 
             migrationBuilder.InsertData(
                 table: "Hotels",
-                columns: new[] { "id", "Address", "CountryId", "Name", "Rating" },
+                columns: new[] { "Id", "Address", "CountryId", "Name", "Rating" },
                 values: new object[,]
                 {
                     { 1, "Downtown", 4, "Adayar Anantha Bhavan", 4.2999999999999998 },
@@ -40,42 +40,42 @@ namespace HotelListing.API.Migrations
         {
             migrationBuilder.DeleteData(
                 table: "Countries",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 2);
 
             migrationBuilder.DeleteData(
                 table: "Hotels",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 1);
 
             migrationBuilder.DeleteData(
                 table: "Hotels",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 2);
 
             migrationBuilder.DeleteData(
                 table: "Hotels",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 3);
 
             migrationBuilder.DeleteData(
                 table: "Hotels",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 4);
 
             migrationBuilder.DeleteData(
                 table: "Countries",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 1);
 
             migrationBuilder.DeleteData(
                 table: "Countries",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 3);
 
             migrationBuilder.DeleteData(
                 table: "Countries",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 4);
         }
     }

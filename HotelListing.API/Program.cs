@@ -1,4 +1,7 @@
+using HotelListing.API.Configuration;
+using HotelListing.API.Contracts;
 using HotelListing.API.Data;
+using HotelListing.API.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -26,6 +29,14 @@ builder.Host.UseSerilog((ctx,lc) => lc.WriteTo.Console().ReadFrom.Configuration(
 //Adding database connection\
 var connectionString = builder.Configuration.GetConnectionString("MyDatabase");
 builder.Services.AddDbContext<HotelListingDbContext>(options => { options.UseSqlServer(connectionString); }) ;
+
+//Adding Automapper configuration
+builder.Services.AddAutoMapper(typeof(MapperConfiguration));
+
+//Injecting services to the controller
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped(typeof(ICountryRepository), typeof(CountryRepository));
+
 
 var app = builder.Build();
 

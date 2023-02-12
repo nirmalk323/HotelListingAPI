@@ -1,12 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HotelListing.API.Model
+namespace HotelListing.API.Data
 {
     public class Hotel
     {
-        [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         [ForeignKey(nameof(CountryId))]
         public int CountryId { get; set; }

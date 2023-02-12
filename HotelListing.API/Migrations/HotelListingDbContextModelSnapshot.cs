@@ -23,11 +23,11 @@ namespace HotelListing.API.Migrations
 
             modelBuilder.Entity("HotelListing.API.Model.Country", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -37,32 +37,32 @@ namespace HotelListing.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Countries", (string)null);
 
                     b.HasData(
                         new
                         {
-                            id = 1,
+                            Id = 1,
                             Name = "United States",
                             ShortName = "US"
                         },
                         new
                         {
-                            id = 2,
+                            Id = 2,
                             Name = "Australia",
                             ShortName = "AUS"
                         },
                         new
                         {
-                            id = 3,
+                            Id = 3,
                             Name = "India",
                             ShortName = "IND"
                         },
                         new
                         {
-                            id = 4,
+                            Id = 4,
                             Name = "Cannada",
                             ShortName = "CAN"
                         });
@@ -70,11 +70,11 @@ namespace HotelListing.API.Migrations
 
             modelBuilder.Entity("HotelListing.API.Model.Hotel", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .IsRequired()
@@ -90,7 +90,7 @@ namespace HotelListing.API.Migrations
                     b.Property<double>("Rating")
                         .HasColumnType("float");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.HasIndex("CountryId");
 
@@ -99,7 +99,7 @@ namespace HotelListing.API.Migrations
                     b.HasData(
                         new
                         {
-                            id = 1,
+                            Id = 1,
                             Address = "Downtown",
                             CountryId = 4,
                             Name = "Adayar Anantha Bhavan",
@@ -107,7 +107,7 @@ namespace HotelListing.API.Migrations
                         },
                         new
                         {
-                            id = 2,
+                            Id = 2,
                             Address = "Texas",
                             CountryId = 1,
                             Name = "Anjappar",
@@ -115,7 +115,7 @@ namespace HotelListing.API.Migrations
                         },
                         new
                         {
-                            id = 3,
+                            Id = 3,
                             Address = "Bangalore",
                             CountryId = 3,
                             Name = "Saravana Bhavan",
@@ -123,7 +123,7 @@ namespace HotelListing.API.Migrations
                         },
                         new
                         {
-                            id = 4,
+                            Id = 4,
                             Address = "Coimbatore",
                             CountryId = 3,
                             Name = "Junior Kuppanna",

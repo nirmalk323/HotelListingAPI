@@ -1,5 +1,4 @@
-﻿using HotelListing.API.Model;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace HotelListing.API.Data
 {
@@ -19,7 +18,7 @@ namespace HotelListing.API.Data
             modelBuilder.Entity<Hotel>().HasData(
                 new Hotel
                 {
-                    id = 1,
+                    Id = 1,
                     Name = "Adayar Anantha Bhavan",
                     Address = "Downtown",
                     CountryId= 4,
@@ -27,7 +26,7 @@ namespace HotelListing.API.Data
                 },
                 new Hotel
                 {
-                    id = 2,
+                    Id = 2,
                     Name = "Anjappar",
                     Address = "Texas",
                     CountryId = 1,
@@ -35,7 +34,7 @@ namespace HotelListing.API.Data
                 },
                 new Hotel
                 {
-                    id = 3,
+                    Id = 3,
                     Name = "Saravana Bhavan",
                     Address = "Bangalore",
                     CountryId = 3,
@@ -43,7 +42,7 @@ namespace HotelListing.API.Data
                 },
                 new Hotel
                 {
-                    id = 4,
+                    Id = 4,
                     Name = "Junior Kuppanna",
                     Address = "Coimbatore",
                     CountryId = 3,
@@ -53,25 +52,25 @@ namespace HotelListing.API.Data
             modelBuilder.Entity<Country>().HasData(
                new Country
                {
-                   id= 1,
+                   Id= 1,
                    Name="United States",
                    ShortName="US"
                },
                new Country
                {
-                   id = 2,
+                   Id = 2,
                    Name = "Australia",
                    ShortName = "AUS"
                },
                new Country
                {
-                   id = 3,
+                   Id = 3,
                    Name = "India",
                    ShortName = "IND"
                },
                new Country
                {
-                   id = 4,
+                   Id = 4,
                    Name = "Cannada",
                    ShortName = "CAN"
                });
